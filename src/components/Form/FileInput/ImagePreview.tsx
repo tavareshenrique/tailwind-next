@@ -14,8 +14,6 @@ function FileInputImagePreview() {
     return URL.createObjectURL(files[0])
   }, [files])
 
-  console.log('previewURL', previewURL)
-
   if (previewURL === null) {
     return (
       <div className="flex h-16 w-16 items-center justify-center rounded-full bg-violet-50">

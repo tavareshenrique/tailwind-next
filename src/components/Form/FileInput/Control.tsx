@@ -6,7 +6,7 @@ import { useFileInput } from './Root'
 
 type TFileInputControl = ComponentProps<'input'>
 
-function FileInputControl(props: TFileInputControl) {
+function FileInputControl({ multiple = false, ...props }: TFileInputControl) {
   const { id, onFilesSelected } = useFileInput()
 
   function handleFilesSelected(event: ChangeEvent<HTMLInputElement>) {
@@ -14,7 +14,7 @@ function FileInputControl(props: TFileInputControl) {
 
     const files = Array.from(event.target.files)
 
-    onFilesSelected(files)
+    onFilesSelected(files, multiple)
   }
 
   return (
@@ -23,6 +23,7 @@ function FileInputControl(props: TFileInputControl) {
       className="sr-only"
       id={id}
       onChange={handleFilesSelected}
+      multiple={multiple}
       {...props}
     />
   )
