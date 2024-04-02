@@ -1,6 +1,7 @@
 import { Mail } from 'lucide-react'
 
 import * as FileInput from '@/components/Form/FileInput'
+import { Select } from '@/components/Form/Select'
 import * as Input from '@/components/Input'
 import { SettingsTabs } from '@/components/SettingsTabs'
 
@@ -120,9 +121,8 @@ export default function Home() {
             >
               Country
             </label>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="h-10 w-full bg-purple-600" />
-            </div>
+
+            <Select />
             <div />
           </div>
 
