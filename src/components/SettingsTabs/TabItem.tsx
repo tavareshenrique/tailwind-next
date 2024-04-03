@@ -10,10 +10,12 @@ interface ITabItemProps {
 export function TabItem({ title, value, isSelected = false }: ITabItemProps) {
   return (
     <Tabs.Trigger
-      className="relative cursor-pointer px-1 pb-4 text-sm font-medium text-zinc-500 transition-colors duration-200 hover:text-violet-700 data-[state=active]:text-violet-700"
+      className="group relative cursor-pointer px-1 pb-4 text-sm font-medium text-zinc-500 outline-none transition-colors duration-200 hover:text-violet-700 data-[state=active]:text-violet-700"
       value={value}
     >
-      <span>{title}</span>
+      <span className="rounded group-focus-visible:ring-2 group-focus-visible:ring-violet-400 group-focus-visible:ring-offset-4">
+        {title}
+      </span>
 
       {isSelected && (
         <motion.div
