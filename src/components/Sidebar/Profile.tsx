@@ -21,7 +21,7 @@ export function Profile() {
         </span>
       </div>
 
-      <Button type="button" variant="ghost">
+      <Button type="button" variant="ghost" className="ml-auto">
         <LogOut className="h-5 w-5 text-zinc-500" />
       </Button>
     </div>
